@@ -1,11 +1,49 @@
 <!DOCTYPE html>
+
 <html lang="en">
- <head>
-   <meta charset="utf-8">
-    <title>5XX Level Errors page</title>
+
+	<head>
+		<style>
+			.hide-text {
+				text-indent: 100%;
+				white-space: nowrap;
+				overflow: hidden;
+				display:none;
+			}
+			.errorMessage {
+				text-align: center;
+				padding: 0.5em 0.5em 0.5em 0.5em;
+				font-size: 1em;
+			}
+			.refreshButton {
+				text-align: center;
+				padding: 0.5em 0.5em 0.5em 0.5em;
+				font-size: 1em;
+			}
+		</style>
+	
+
 </head>
-<body>
-  <h1> 5XX Level Errors </h1>
-  <h2>::CLOUDFLARE_ERROR_500S_BOX::</h2>
-</body>
+
+	<body>
+		<div>
+			<p class = "errorMessage">Oops...Something went wrong</p>
+		</div>
+		<div class = "hide-text"><div class="cf-error-details cf-error-522">
+  <h1>Connection timed out</h1>
+  <p>The initial connection between Cloudflare's network and the origin web server timed out. As a result, the web page can not be displayed.</p>
+  <ul>
+    <li>Ray ID: 000000000000000</li>
+    <li>Your IP address: 0.0.0.0</li>
+    <li>Error reference number: 522</li>
+    <li>Cloudflare Location: San José</li>
+  </ul>
+</div>
+</div>
+		<br/><br/>
+
+		<form class = "refreshButton">
+			<input type=button value="Refresh" onClick="window.location.reload()">
+		</form> 
+	</body>
 </html>
